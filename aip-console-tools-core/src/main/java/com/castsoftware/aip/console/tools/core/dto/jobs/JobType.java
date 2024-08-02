@@ -43,7 +43,6 @@ public enum JobType {
     UPLOAD_SNAPSHOT_VERSION(Constants.UPLOAD_SNAPSHOT_VERSION, "Unzip previously uploaded source, create version, analyze and create a snapshot"),
 
     RESCAN_APPLICATION(Constants.RESCAN_APPLICATION, "Clone previous version, launch analysis and create snapshot"),
-    RENAME_APPLICATION_IN_UNIFIED(Constants.RENAME_APPLICATION, "Rename application"),
     DEEP_ANALYSIS(Constants.DEEP_ANALYSIS, "Deep Analysis"),
 
     ADD_VERSION(Constants.ADD_VERSION, "Add a new version"),
@@ -115,11 +114,12 @@ public enum JobType {
     RECOMPUTE_CHECKSUMS(Constants.RECOMPUTE_CHECKSUMS, "Recompute checksums"),
 
     RECOMPUTE_SNAPSHOT_INDICATORS(Constants.RECOMPUTE_SNAPSHOT_INDICATORS, "Recompute snapshot indicators"),
-    PROCESS_IMAGING("process-imaging", "Upload to CAST-Imaging"),
-    RECOMPUTE_APPLICATION_INDICATORS("recompute-application-indicators", "Recompute application indicators"),
-    IMPORT_APPLICATION_TO_IMAGING_VIEWER("import-application-to-imaging-viewer", "Import application to Imaging Viewer"),
-    DELETE_APPLICATION_FROM_UNIFIED("delete-application-from-unified", "Delete application from Unified"),
+
+    PROCESS_IMAGING(Constants.PROCESS_IMAGING, "Process imaging"),
+    IMPORT_APPLICATION_TO_IMAGING_VIEWER(Constants.IMPORT_APPLICATION_TO_IMAGING_VIEWER, "Import application to imaging viewer"),
+
     REFERENCE_FINDER(Constants.REFERENCE_FINDER, "Run Reference Finder");
+
 
     private final String label;
     private final String displayName;

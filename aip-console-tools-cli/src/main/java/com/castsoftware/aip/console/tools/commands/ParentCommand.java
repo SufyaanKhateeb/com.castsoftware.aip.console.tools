@@ -22,7 +22,8 @@ import java.util.concurrent.Callable;
                 FastScanCommand.class,
                 DeepAnalysisCommand.class,
                 PublishToImagingCommand.class,
-                OnboardApplicationCommand.class
+                OnboardApplicationCommand.class,
+                ImportApplicationsCommand.class
         },
         commandListHeading = "%nPossible values for COMMAND:%n%n",
         versionProvider = VersionProvider.class

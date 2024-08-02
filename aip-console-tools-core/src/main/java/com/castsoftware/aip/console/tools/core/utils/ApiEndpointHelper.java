@@ -43,6 +43,7 @@ public class ApiEndpointHelper {
     public static final String ONBOARD_APPLICATION_ENDPOINT = "/onboard-application";
     public static final String DISCOVER_APPLICATION_ENDPOINT = "/discover-application";
     public static final String FAST_SCAN_ENDPOINT = "/fast-scan";
+    public static final String CSS_SETTINGS = "/css-settings";
     public static final String ENABLE_ONBOARDING_PATH = "/enable-onboarding";
     public static final String IMAGING_SETTINGS_PATH = "/imaging-settings";
     public static final String FIRST_SCAN_PATH = "/first-scan-application";
@@ -144,6 +145,20 @@ public class ApiEndpointHelper {
 
     public static String getPublishToImagingEndPoint() {
         return getJobsEndpoint() + PUBLISH_PATH;
+    }
+
+    public static String getCssSettings() {
+        return URL_SETTINGS_PATH + CSS_SETTINGS;
+    }
+
+    public static String getServerAppList(String serverGuid) {
+        assert serverGuid != null && !serverGuid.isEmpty();
+        return ROOT_PATH + "/css/" + serverGuid + "/applications";
+    }
+
+    public static String getImportApplication(String serverGuid) {
+        assert serverGuid != null && !serverGuid.isEmpty();
+        return ROOT_PATH + "/css/" + serverGuid + "/import-applications";
     }
 
     public static String getEnableOnboardingSettingsEndPoint() {

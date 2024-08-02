@@ -315,7 +315,7 @@ public class JobsServiceImpl implements JobsService {
     public String getCssGuid(String cssServerName) throws JobServiceException {
         if (StringUtils.isNotEmpty(cssServerName)) {
             try {
-                DatabaseConnectionSettingsDto[] cssServers = restApiService.getForEntity("api/settings/css-settings",
+                DatabaseConnectionSettingsDto[] cssServers = restApiService.getForEntity(ApiEndpointHelper.getCssSettings(),
                         DatabaseConnectionSettingsDto[].class);
                 Optional<DatabaseConnectionSettingsDto> targetCss = Arrays.stream(cssServers).filter(db -> buildCssServerName(db).equalsIgnoreCase(cssServerName)).findFirst();
                 if (targetCss.isPresent()) {

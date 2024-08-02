@@ -96,6 +96,8 @@ public class Constants {
     public static final String CONSOLIDATE_SNAPSHOT = "consolidate_snapshot";
     public static final String SNAPSHOT_INDICATOR = "snapshot_indicator";
     public static final String PROCESS_IMAGING = "process_imaging";
+    public static final String DELETE_APPLICATION_FROM_UNIFIED = "delete_application_from_unified";
+    public static final String IMPORT_APPLICATION_TO_IMAGING_VIEWER = "import_application_to_imaging_viewer";
 
     public static final String UPLOAD_SNAPSHOTS = "upload_snapshots";
     // New name for the last step in analysis (this consolidate snapshots and upload to central db)
